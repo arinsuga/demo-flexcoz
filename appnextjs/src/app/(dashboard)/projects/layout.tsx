@@ -1,9 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Projects | Flexcoz',
-  description: 'Track and manage your projects.',
-};
+'use client';
 
 export default function ProjectsLayout({
   children,

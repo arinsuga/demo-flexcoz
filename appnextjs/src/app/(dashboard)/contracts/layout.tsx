@@ -1,9 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Contracts | Flexcoz',
-  description: 'Manage your contracts efficiently.',
-};
+'use client';
 
 export default function ContractsLayout({
   children,

@@ -1,9 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Dashboard | Flexcoz',
-  description: 'Overview of your contracts and orders.',
-};
+'use client';
 
 export default function DashboardLayout({
   children,

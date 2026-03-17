@@ -1,9 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Vendors | Flexcoz',
-  description: 'Manage your vendor relationships.',
-};
+'use client';
 
 export default function VendorsLayout({
   children,
