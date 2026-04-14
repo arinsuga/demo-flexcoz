@@ -8,8 +8,8 @@ import { useAuthStore } from '@/store/authStore';
 import Link from 'next/link';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('lisa@master.com');
+  const [password, setPassword] = useState('masterapp99');
   const [error, setError] = useState('');
   const router = useRouter();
   const setAuth = useAuthStore((state) => state.setAuth);
@@ -41,7 +41,8 @@ export default function LoginPage() {
   return (
     <div className="bg-white dark:bg-gray-800 py-8 px-4 shadow sm:rounded-lg sm:px-10">
       <div className="sm:mx-auto sm:w-full sm:max-w-md mb-6">
-        <h2 className="text-center text-2xl font-bold text-gray-900 dark:text-white">Sign in to your account</h2>
+        <h2 className="text-center font-bold text-gray-900 dark:text-white">Hi, I am Arin Suga</h2>
+        <h2 className="text-center font-bold text-gray-900 dark:text-white">Welcome!</h2>
       </div>
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
@@ -55,7 +56,7 @@ export default function LoginPage() {
               type="email"
               autoComplete="email"
               required
-              value={email}
+              value={'secret@mail.com'}
               onChange={(e) => setEmail(e.target.value)}
               className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />
@@ -70,10 +71,10 @@ export default function LoginPage() {
             <input
               id="password"
               name="password"
-              type="password"
+              type="text"
               autoComplete="current-password"
               required
-              value={password}
+              value={'secret'}
               onChange={(e) => setPassword(e.target.value)}
               className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />
@@ -97,24 +98,6 @@ export default function LoginPage() {
         </div>
       </form>
 
-      <div className="mt-6">
-        <div className="relative">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-300 dark:border-gray-600" />
-          </div>
-          <div className="relative flex justify-center text-sm">
-            <span className="px-2 bg-white dark:bg-gray-800 text-gray-500">
-              Or
-            </span>
-          </div>
-        </div>
-
-        <div className="mt-6 text-center">
-            <Link href="/register" className="font-medium text-primary hover:text-opacity-80">
-                Create a new account
-            </Link>
-        </div>
-      </div>
     </div>
   );
 }

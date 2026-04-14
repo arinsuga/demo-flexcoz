@@ -7,10 +7,10 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
          <div className="flex flex-col items-center justify-center">
             {/* Logo can be added here if needed */}
             <div className="h-12 w-12 rounded bg-primary flex items-center justify-center text-white font-bold text-xl">
-               F
+               <img src="/logo.png" alt="Logo" width={100} height={100} />
             </div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">
-               Flexcoz
+               Flexcoz Demo
             </h2>
          </div>
          {children}
